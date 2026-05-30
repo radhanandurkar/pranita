@@ -1,0 +1,132 @@
+/* Custom Properties for a Romantic Palette */
+:root {
+  --primary-pink: #ff4f8b;
+  --deep-pink: #d4145a;
+  --soft-pink: #ffeef4;
+  --glass: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.4);
+}
+
+body {
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ffd1ff);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Enhanced Glassmorphism Card */
+.glass-card {
+  background: var(--glass);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Typography */
+.dancing-font {
+  font-family: 'Dancing Script', cursive;
+}
+
+.main-title {
+  font-size: 4.5rem;
+  color: var(--deep-pink);
+  text-shadow: 2px 2px 10px rgba(212, 20, 90, 0.2);
+}
+
+/* Marathi Verse Styling */
+.marathi-verse {
+  font-size: 1.25rem;
+  line-height: 2.2;
+  color: #444;
+  font-weight: 500;
+  border-left: 4px solid var(--primary-pink);
+  padding-left: 20px;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+/* Buttons */
+.btn-romantic {
+  background: linear-gradient(45deg, var(--primary-pink), var(--deep-pink));
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.4s;
+  box-shadow: 0 10px 20px rgba(212, 20, 90, 0.3);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-romantic:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 25px rgba(212, 20, 90, 0.4);
+  color: white;
+}
+/* --- Add to your existing css/style.css --- */
+
+/* 3D Perspective Container */
+body {
+    perspective: 1000px;
+    overflow-x: hidden;
+}
+
+/* Floating 3D Elements */
+.floating-obj {
+    position: fixed;
+    z-index: -1;
+    filter: blur(1px);
+    animation: float3D 15s infinite linear;
+    opacity: 0.4;
+}
+
+@keyframes float3D {
+    0% { transform: translateZ(0) translateY(0) rotate(0); }
+    50% { transform: translateZ(100px) translateY(-50px) rotate(180deg); }
+    100% { transform: translateZ(0) translateY(0) rotate(360deg); }
+}
+
+/* 3D Glass Card Effect */
+.glass-card-3d {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    transform-style: preserve-3d; /* Key for 3D depth */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    transition: 0.1s;
+}
+
+/* Custom Heart Cursor */
+body {
+    cursor: url("https://cdn-icons-png.flaticon.com/32/2107/2107845.png"), auto;
+}
+
+/* Timeline 3D Connector */
+.timeline-line {
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, var(--primary-pink), transparent);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}

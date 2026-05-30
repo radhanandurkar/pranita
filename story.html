@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Our Story ❤️</title>
+
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        
+        body {
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #ffd6e7, #fff4c2, #ffffff);
+            min-height: 100vh;
+            position: relative;
+        }
+        /* Floating Hearts */
+        
+        .heart {
+            position: absolute;
+            font-size: 22px;
+            animation: floatHeart 10s linear infinite;
+            opacity: 0.7;
+        }
+        
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-120vh);
+                opacity: 0;
+            }
+        }
+        /* Hero */
+        
+        .hero {
+            text-align: center;
+            padding: 80px 20px 40px;
+        }
+        
+        .hero h1 {
+            font-size: 5rem;
+            color: #ff4f8b;
+            font-family: "Dancing Script", cursive;
+            margin-bottom: 20px;
+            animation: glow 2s infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #ffb6d2;
+            }
+            to {
+                text-shadow: 0 0 25px #ff4f8b;
+            }
+        }
+        
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 2;
+        }
+        /* Timeline */
+        
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 20px;
+        }
+        
+        .timeline::after {
+            content: "";
+            position: absolute;
+            width: 6px;
+            background: #ff8eb6;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 20px;
+        }
+        
+        .container-box {
+            padding: 20px 40px;
+            position: relative;
+            width: 50%;
+        }
+        
+        .container-box.left {
+            left: 0;
+        }
+        
+        .container-box.right {
+            left: 50%;
+        }
+        
+        .content {
+            background: rgba(255, 255, 255, 0.35);
+            padding: 25px;
+            border-radius: 25px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.15);
+            transition: 0.4s;
+        }
+        
+        .content:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+        
+        .content h2 {
+            color: #ff4f8b;
+            margin-bottom: 10px;
+            font-family: "Dancing Script", cursive;
+            font-size: 2rem;
+        }
+        
+        .content p {
+            color: #555;
+            line-height: 1.8;
+        }
+        /* Timeline Dots */
+        
+        .container-box::after {
+            content: "❤️";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            right: -25px;
+            background: #fff;
+            border-radius: 50%;
+            top: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            z-index: 2;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .right::after {
+            left: -25px;
+        }
+        /* Photos */
+        
+        .story-photo {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-top: 15px;
+        }
+        /* Final Message */
+        
+        .ending {
+            text-align: center;
+            padding: 60px 20px;
+            font-size: 2rem;
+            color: #ff4f8b;
+            font-family: "Dancing Script", cursive;
+            line-height: 1.8;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+        }
+        /* Responsive */
+        
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            .container-box {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 20px;
+            }
+            .container-box.right {
+                left: 0;
+            }
+            .container-box::after {
+                left: 5px;
+            }
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Music -->
+    <!-- 
+    <audio autoplay loop>
+      <source src="music/love.mp3" type="audio/mp3" />
+    </audio> -->
+
+    <!-- Floating Hearts -->
+
+    <div class="heart" style="left: 10%; animation-delay: 0s">❤️</div>
+    <div class="heart" style="left: 25%; animation-delay: 2s">💖</div>
+    <div class="heart" style="left: 40%; animation-delay: 4s">💕</div>
+    <div class="heart" style="left: 60%; animation-delay: 1s">💘</div>
+    <div class="heart" style="left: 75%; animation-delay: 3s">💝</div>
+
+    <!-- Hero -->
+
+    <section class="hero">
+        <h1>Our Beautiful Story ❤️</h1>
+
+        <p>
+            Every love story is beautiful, but ours is my favorite ✨ From the first moment we met, my world slowly became brighter, softer, and happier because of you 💖
+        </p>
+    </section>
+
+    <!-- Timeline -->
+
+    <div class="timeline">
+        <!-- Story 1 -->
+
+        <div class="container-box left">
+            <div class="content">
+                <h2>Where it all began🌸</h2>
+
+                <p>
+                    त्या दिवशी ताऱ्यांनी जणू एकमेकांना भेटायचं ठरवलं होतं… कारण<br /> पहिल्यांदाच तुझं ते सुंदर हास्य माझ्या नजरेसमोर खुललं होतं. ✨
+                </p>
+
+                <img src="l.jpeg" class="story-photo" />
+            </div>
+        </div>
+
+        <!-- Story 2 -->
+
+        <div class="container-box right">
+            <div class="content">
+                <h2>First Conversation ✨</h2>
+
+                <p>
+                    केमिस्ट्रीच्या त्या लेक्चरमध्ये, तू हळूच उत्तर विचारलं होतंस…
+                    <br />आणि त्या एका क्षणात, माझं पूर्ण आयुष्यच तुझ्याकडे वळलं होतं.💕
+                </p>
+
+                <img src="k.jpeg" class="story-photo" />
+            </div>
+        </div>
+
+        <!-- Story 3 -->
+
+        <div class="container-box left">
+            <div class="content">
+                <h2>Our first click📸</h2>
+
+                <p>
+                    पहिला फोटो आपला… क्षण छोटासा होता, पण आठवण कायमची बनली…<br /> त्या एका हसण्यातच, कितीतरी भावना अलगद साठून गेल्या.💖
+                </p>
+
+                <img src="c.jpeg" class="story-photo" />
+            </div>
+        </div>
+
+        <!-- Story 4 -->
+
+        <div class="container-box right">
+            <div class="content">
+                <h2>Unspoken connection❤️</h2>
+
+                <p>
+                    काही दिवसांतच जुळलेलं नातं होतं,<br /> शब्दांशिवाय तयार झालेला comfortzone…<br /> मर्यादा होत्या, अपेक्षा नव्हत्या, पण मन मात्र गुंतत गेलं होतं.💖
+                </p>
+
+                <img src="d.jpeg" class="story-photo" />
+            </div>
+        </div>
+
+        <!--Story 5-->
+        <div class="container-box left">
+            <div class="content">
+                <h2>She said yes❤️</h2>
+
+                <p>
+                    आणि मग त्या सगळ्या silent story ला एक शब्द मिळाला…<br /> “हो” — ज्याने सगळं साधं असूनही खास करून टाकलं.✨
+                </p>
+
+                <img src="e.jpeg" class="story-photo" />
+            </div>
+        </div>
+        <!-- Story 6 -->
+
+        <div class="container-box right">
+            <div class="content">
+                <h2>Our Gossip❤️</h2>
+
+                <p>
+                    लेक्चरच्या गप्पा रात्रीच्या VC पर्यंत पोहोचल्या,<br /> हसता-हसता मनं नकळत जवळ येत गेली… <br />आणि साधं सुरू झालेलं सगळं खास बनत गेलं.💕
+                </p>
+
+                <img src="f.jpeg" class="story-photo" />
+            </div>
+        </div>
+
+        <!-- Story 7 -->
+
+        <div class="container-box left">
+            <div class="content">
+                <h2>Traditional day❣️</h2>
+
+                <p>
+                    साडी आणि कुर्त्यात सजलेला तो दिवस…<br /> तू वेगळीच, पण अजून जवळची वाटत होतीस.<br /> हसण्यातच सगळं सौंदर्य सामावलं होतं.❤️
+                </p>
+
+                <img src="i.jpeg" class="story-photo" />
+            </div>
+        </div>
+
+        <!-- Story 8 -->
+
+        <div class="container-box right">
+            <div class="content">
+                <h2>Forerver together♾️</h2>
+
+                <p>
+                    हळूहळू रुजलेलं नातं आता सुंदर रोपटं बनलं आहे,<br> प्रत्येक क्षणाने त्याला प्रेमाने वाढवलं आहे…<br>आणि अशीच साथ राहो शेवटच्या श्वासापर्यंत,<br> हीच मनापासूनची शांत प्रार्थना आहे.❣️
+                </p>
+
+                <img src="j.jpeg" class="story-photo" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Ending -->
+
+    <div class="ending">
+        You are not just my love 💖<br /> You are my peace, my comfort,<br /> and my favorite person forever ✨
+    </div>
+
+    <!-- Footer -->
+
+    <footer>Made with endless love ❤️</footer>
+</body>
+
+</html>
